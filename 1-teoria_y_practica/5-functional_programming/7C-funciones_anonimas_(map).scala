@@ -56,6 +56,11 @@
         //var doubleOfNumbers = listOfNumbers.map(x => x * 2)
         var doubleOfNumbers = listOfNumbers.map(_ * 2)
 
+        //============= Ejemplo 4 =============
+        // Observe que convierte un Int en un Booleano, y el resultado del map 
+        // es entonces una List[Boolean].
+        var doubleOfNumbers = listOfNumbers.map(x => x % 2 == 0)
+
     }
 /*
         ============= Ejemplo 1 =============
@@ -64,4 +69,7 @@
         List(0, 1, 4, 9, 16, 25, 36, 49, 64, 81)
         ============= Ejemplo 3 =============
         List(0, 2, 4, 6, 8, 10, 12, 14, 16, 18)
+        ============= Ejemplo 4 =============
+        List(true, false, true, false, true, false, true, false, true, false)
+
 */

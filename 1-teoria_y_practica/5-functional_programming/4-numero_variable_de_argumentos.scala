@@ -79,3 +79,49 @@
 
         }
     }
+
+
+//  EJEMPLO 3
+//  =========
+
+    package scala
+
+    object test {
+        def main(args: Array[String]): Unit = {
+
+            println(greet("Hi", "Fred", "Julie", "Kim"))
+            // ArraySeq(Hi Fred, Hi Julie, Hi Kim)
+
+        }
+
+        def greet(greeting: String, names: String*):Seq[String] = {
+            for (name <- names)
+            yield s"$greeting $name"
+        }
+    }
+
+    //  ¿Y si queremos agregar una colección de nombres ya existente?
+
+    package scala
+
+    object test {
+        def main(args: Array[String]): Unit = {
+
+            println(greet("Hi", "Fred", "Julie", "Kim"))
+            // ArraySeq(Hi Fred, Hi Julie, Hi Kim)
+
+            // 'greet' a seq of names:
+            val nombres = List("Alfonso", "Tomas", "Javiera")
+            // greet("Hi", nombres) // Esto no compilará
+
+            // Para ello, utilizamos el operador de expansión
+            println(greet("Hi", nombres: _*)) // operador de expansion
+            // List(Hi Alfonso, Hi Tomas, Hi Javiera)
+
+        }
+
+        def greet(greeting: String, names: String*) = {
+            for (name <- names)
+            yield s"$greeting $name"
+        }
+    }

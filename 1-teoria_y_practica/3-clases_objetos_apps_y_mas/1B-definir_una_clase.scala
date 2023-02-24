@@ -3,34 +3,56 @@
     ======================================================
 */
 
-//  Los parámetros (nombre y apellidos) de una clase (Alumno) son 'val', por tanto, si se quieren modificar 
-//  se debe anteponer un 'var' 
+//  Si queremos acceder directamente a los parametros de la Clase 'Alumno' desde las instancias, DEBEMOS
+//  especificar EXPLICITAMENTE 'val' (si solo queremos visualziarlas) o 'var' (si queremos visualizarlas 
+//  o modificarlas)
 
-    package curso
+    package scala
 
-//  class Alumno (val nombre:String, val apellidos:String){  <========== Es lo mismo
     class Alumno (nombre:String, apellidos:String){
 
-        var edad:Int =_  // Inicializar variable por defecto
+        var edad:Int =_ 
 
-        def visualizar():Unit = {
-            println(nombre)
-            println(apellidos)
-            println(edad)
-        }
+    def visualizar():Unit = {
+        println(nombre)
+        println(apellidos)
+        println(edad)
+    }
     }
 
-    object FuncionesClasesYObjetosD {
-
+    object test {
         def main(args: Array[String]): Unit = {
 
             var alumno1 = new Alumno("Alfonso","Perez")
-            println(alumno1)            // curso.Alumno@7f63425a
-            println(alumno1.toString)   // curso.Alumno@7f63425a
-            alumno1.edad = 10
-            println(alumno1.edad)       // 10
-            alumno1.visualizar()        // Alfonso
-                                        // Perez
-                                        // 10
+
+            println(alumno1.nombre) // ERROR
+
+        }
+    }
+
+//  MANERA CORRECTA
+
+    package scala
+
+    // Se especifica EXPLICITAMENTE 'val'. Si queremos lo hacemos para uno o para todos los parametros
+    class Alumno (val nombre:String, val apellidos:String){
+
+        var edad:Int =_ 
+
+    def visualizar():Unit = {
+        println(nombre)
+        println(apellidos)
+        println(edad)
+    }
+    }
+
+    object test {
+        def main(args: Array[String]): Unit = {
+
+            var alumno1 = new Alumno("Alfonso","Perez")
+
+            // Al utilizar 'val' solo podemos visualizar PERO NO MODIFICAR
+            println(alumno1.nombre) // Alfonso
+
         }
     }
