@@ -18,6 +18,6 @@
     |   Null            |   Referencias nulas o vacías                                                            |  
     |   Nothing         |   Subtipo de cualquier otro tipo                                                        |  
     |   Any             |   El supertipo de cualquier tipo. Cualquier objeto es de tipo Any                       |  
-    |   AnyRef          |   El supertipo de cualquier tipo “referencia                                            |      
+    |   AnyRef          |   El supertipo de cualquier tipo "referencia"                                           |      
     |-------------------|-----------------------------------------------------------------------------------------|
 */
