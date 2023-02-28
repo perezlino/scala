@@ -59,6 +59,14 @@
     val matriz = (1::(2::(3::Nil))) :: (4::(5::(6::Nil))) :: (7::(8::(9::Nil))) :: Nil
     // val matriz: List[List[Int]] = List(List(1, 2, 3), List(4, 5, 6), List(7, 8, 9))
 
+    val list = ((Nil.::(6)).::(5)).::(4)   
+    // val list: List[Int] = List(4, 5, 6)
+
+    val num1 = List(1,2,3)
+    val num2 = List(4,5,6)
+    val num3 = num1 ::: num2
+    // val num3: List[Int] = List(1, 2, 3, 4, 5, 6)
+
 //  ----------------------------------------------------------------------------------------------------
 
 //  Definir la lista usando 'range'

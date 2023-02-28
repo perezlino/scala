@@ -35,6 +35,22 @@
     // reverse: Devuelve la lista con los elementos en un orden inverso
     nums.reverse    // val res10: List[Int] = List(10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
 
+    // drop: Elimina primeros elementos segun la cantidad especificada
+    nums.drop(2)
+    // val res11: List[Int] = List(3, 4, 5, 6, 7, 8, 9, 10)
+
+    // take: Devuelve primeros elementos segun la cantidad especificada
+    nums.take(2)
+    // val res12: List[Int] = List(1, 2)
+
+    // updated: Modifica el valor del elemento segun el indice indicado en el 1er argumento
+    nums.updated(0,1000)
+    // val res13: List[Int] = List(1000, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+    // headOption: Devuelve el primer elemento como tipo [Option]
+    nums.headOption 
+    // val res14: Option[Int] = Some(1)   
+
 
     // Definir una lista vacía
     val numeros = Nil // val numeros: collection.immutable.Nil.type = List()

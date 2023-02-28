@@ -9,7 +9,7 @@
         def main(args: Array[String]): Unit = {
 
             // reduceLeft
-            var marks = Array(1, 2, 3, 4, 5)
+            var marks = List(1, 2, 3, 4, 5)
             var avg = marks.reduceLeft((x, y) => (x + y) / 2)
             // var avg2 = marks.reduceLeft(_/2+_/2)
             println("El resultado de '(x+y/2)': " + avg)  // El resultado de '(x+y/2)': 4

@@ -22,4 +22,4 @@
 
 //  - Otro operador exclusivo de listas es concatenar, ::: que une dos listas (de nuevo asociativo a la derecha):
 
-    val liste = lista ::: listb  // val liste: List[Int] = List(1, 2, 3, 4, 5, 6)
+    val liste = lista ::: listd  // val liste: List[Int] = List(1, 2, 3, 4, 5, 6)

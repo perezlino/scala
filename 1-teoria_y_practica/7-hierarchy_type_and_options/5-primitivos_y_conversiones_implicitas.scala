@@ -26,11 +26,11 @@
     val a: Int = 7
     val b: Int = 2
 
-    addDoubles(a, b)  //no es necesario convertir: los tipos se amplían automáticamente
+    addDoubles(a, b)  //no es necesario convertir: los tipos se amplían (wide) automáticamente
     // val res0: Double = 9.0
 
     def addInts(a: Int, b: Int): Int = a + b
 
-    // addInts(1.0, 2.0)  // pero sólo de una manera, tenemos que estrechar explícitamente los tipos
+    // addInts(1.0, 2.0)  // pero sólo de una manera, tenemos que estrechar (narrow) explícitamente los tipos
     addInts(1.0.toInt, 2.0.toInt)
     // val res1: Int = 3
