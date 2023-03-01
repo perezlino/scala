@@ -80,3 +80,35 @@
         Nombre:Alberto Perez VIP
 */
     }
+
+
+//  EJEMPLO 3
+//  =========
+
+    package scala
+
+    class Persona(val nombre:String){
+        def saludo:String = s"Hola, mi nombre es $nombre"
+    }
+
+    object Persona{
+        val numOjos = 2
+        def caminar:Boolean = true
+    }
+
+    object test {
+        def main(args: Array[String]): Unit = {
+
+            val javiera = new Persona("Javiera")
+            val javieraSaluda = javiera.saludo
+            println(javieraSaluda)  // Hola, mi nombre es Javiera
+
+            val personasPuedenCaminar = Persona.caminar
+            println(personasPuedenCaminar)  // true
+
+            val numOjosPersona = Persona.numOjos
+            println(numOjosPersona)   // 2
+
+
+        }
+    }

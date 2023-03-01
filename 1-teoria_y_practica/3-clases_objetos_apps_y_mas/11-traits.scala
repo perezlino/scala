@@ -54,6 +54,7 @@
                                            // en la clase que extiende el trait car
     }
 
+    // Las Clases no abstractas deben implementar los atributos y metodos no definidos en el 'trait' padre
     class Mercedes extends Auto{          // keyword es extendida
 
         def break(): Unit = {              // aquí se implementa el método break() no implementado

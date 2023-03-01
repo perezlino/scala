@@ -5,6 +5,9 @@
 
 //  Las clases extienden otras clases utilizando la palabra clave 'extends'.
 
+//  Los objetos si pueden extender de una Clase. Pero no al reves. Recordar que no podemos
+//  instanciar un Objeto.
+
 
 //  EJEMPLO 1
 //  ---------
@@ -130,4 +133,29 @@
         Estamos en la Clase abstracta 'Fruit'
         Estamos en la Clase 'Orange'
 */
+    }
+
+
+
+//  EJEMPLO 3
+//  ---------
+
+    package scala
+
+    class Persona {
+        val numero = 50
+
+        def metodo(x: Int) = x + 1
+    }
+
+    object Joven extends Persona {
+        override val numero = 100
+    }
+
+    object test {
+        def main(args: Array[String]): Unit = {
+
+            val num = Joven.numero
+            println(num)  // 100
+        }
     }

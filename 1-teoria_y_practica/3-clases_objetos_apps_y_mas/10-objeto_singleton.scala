@@ -61,3 +61,36 @@
             Asignatura.suspendido   // Suspendido
         }
     }
+
+
+//  EJEMPLO 3
+//  =========
+
+    package scala
+
+    object Singleton {
+        val numero = 50
+        def metodo(x:Int) = x + 1
+    }
+
+
+    object test {
+        def main(args: Array[String]): Unit = {
+
+            val singleton = Singleton
+            println(singleton)  // scala.Singleton$@7f63425a
+
+            val otroSingleton = Singleton
+            println(otroSingleton)  // scala.Singleton$@7f63425a
+
+            val igualdadReferencial = singleton == otroSingleton
+            println(igualdadReferencial)   // true
+
+            val num = Singleton.numero
+            println(num)   // 50
+
+            val method = Singleton.metodo(2)
+            println(method)   // 3
+
+        }
+    }
