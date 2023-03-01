@@ -15,12 +15,15 @@
     package curso
 
     object example {
+
+        def procedimiento():Unit = {
+            println("Bienvenido a Scala!")
+        }
+
         def main(args: Array[String]): Unit = {
 
-            def procedimiento():Unit = {
-            println("Bienvenido a Scala!")
-            }
-
             procedimiento() // Bienvenido a Scala!
+            procedimiento   // Bienvenido a Scala!
+
         }
     }

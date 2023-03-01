@@ -34,7 +34,7 @@
     def greet(5, 0): Unit = {
         if (0 < 5) {
             println("Hola")
-            greet(5, 1)  <-------------- Se vuelve a ejecutar el metodo greet() esra vez con 
+            greet(5, 1)  <-------------- Se vuelve a ejecutar el metodo greet() esta vez con 
                                          el parametro 'curr' aumentado en 1
         }
     }
